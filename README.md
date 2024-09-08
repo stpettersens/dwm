@@ -14,6 +14,17 @@ I made the following changes to swindlemccoop's build of dwm:
 
 ![alt dwm](screenshot.png)
   
+Remember to install picom or take it out of .xinitrc and .xsession.
+
+FreeBSD:
+`(doas) pkg install picom`
+
+OpenBSD:
+`(doas) pkg_add picom`
+
+Ubuntu:
+`(sudo) apt instal picom` 
+
 Set the path to your wallpapers directory in set_wallpaper.
 Remember to copy .xinitrc and .xsession to your home folder (~).
   
