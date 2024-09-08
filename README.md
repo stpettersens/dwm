@@ -1,3 +1,12 @@
+#### Tweaks by stpettersens
+Set narrower borders and spacing around windows.
+
+* Modkey + b launches browser (librewolf, or if patched brave with brave.diff) rather than togglebar
+* Modkey + Return launches alacritty (replaced st as terminal)
+* Modkey + x launches a dmenu prompt to poweroff or reboot system (or cancel)
+* Modkey + v now does togglebar rather than Modkey + b
+* Modkey + s takes a fullscreen screenshot with flameshot
+
 # DWM
 DWM is my favorite window manager by far due to its simplicity, portability, and low resource usage. However, it requires a decent amount of tweaking if you want to be able to use it for standard tasks. That's what I've aimed to do here, creating a user-friendly environment and memorable keybinds.
 
