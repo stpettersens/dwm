@@ -1,12 +1,22 @@
 #### Tweaks by stpettersens
 Set narrower borders and spacing around windows.
 
+I also use a [forked version of swindlemccoop's dwmblocks build](https://github.com/stpettersens/dwmblocks) to just display the date and time.
+
+I made the following changes to swindlemccoop's build of dwm:
+
 * Modkey + b launches browser (librewolf, or if patched brave with brave.diff) rather than togglebar
 * Modkey + Return launches alacritty (replaced st as terminal)
 * Modkey + x launches a dmenu prompt to poweroff or reboot system (or cancel)
 * Modkey + v now does togglebar rather than Modkey + b
 * Modkey + s takes a fullscreen screenshot with flameshot
 * Modkey + w changes desktop wallpaper using feh --fill-bg --randomize ~/Pictures/wallpaper
+
+  
+Set the path to your wallpapers directory in set_wallpaper.
+  
+To use brave browser rather than librewolf, run the following command:
+> `patch config.h < brave.diff`
 
 # DWM
 DWM is my favorite window manager by far due to its simplicity, portability, and low resource usage. However, it requires a decent amount of tweaking if you want to be able to use it for standard tasks. That's what I've aimed to do here, creating a user-friendly environment and memorable keybinds.
