@@ -23,7 +23,7 @@ OpenBSD:
 `(doas) pkg_add picom`
 
 Ubuntu:
-`(sudo) apt instal picom` 
+`(sudo) apt install picom` 
 
 Set the path to your wallpapers directory in set_wallpaper.
 Remember to copy .xinitrc and .xsession to your home folder (~).
