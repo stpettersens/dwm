@@ -319,8 +319,8 @@ static Key keys[] = {
 
 	{ MODKEY,				XK_h,			setmfact,				{.f = -0.05} },
 	{ MODKEY,				XK_l,			setmfact,				{.f = +0.05} },
-	{ MODKEY|ShiftMask,     XK_q,quit,								{0} },
-	{ MODKEY|ShiftMask,     XK_e,quit,								{0} },
+	//{ MODKEY|ShiftMask,     XK_q,quit,								{0} },
+	//{ MODKEY|ShiftMask,     XK_e,quit,								{0} },
 	{ MODKEY,                               XK_v,                   togglebar,                              {0} },
 	{ MODKEY,                               XK_b,                   spawn,                                  {.v = browsercmd } },
 	{ MODKEY,                               XK_s,                   spawn,                                  {.v = screenshot } },
