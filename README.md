@@ -15,6 +15,7 @@ I made the following changes to swindlemccoop's build of dwm:
 ![alt dwm](screenshot.png)
   
 Set the path to your wallpapers directory in set_wallpaper.
+Remember to copy .xinitrc and .xsession to your home folder (~).
   
 To use brave browser rather than librewolf, run the 
 following command before building with gmake/make:
