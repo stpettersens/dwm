@@ -12,10 +12,12 @@ I made the following changes to swindlemccoop's build of dwm:
 * Modkey + s takes a fullscreen screenshot with flameshot
 * Modkey + w changes desktop wallpaper using feh --fill-bg --randomize ~/Pictures/wallpaper
 
+![alt dwm](screenshot.png)
   
 Set the path to your wallpapers directory in set_wallpaper.
   
-To use brave browser rather than librewolf, run the following command:
+To use brave browser rather than librewolf, run the 
+following command before building with gmake/make:
 > `patch config.h < brave.diff`
 
 # DWM

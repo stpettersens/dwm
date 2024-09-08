@@ -1,0 +1,3 @@
+#!/bin/sh
+# Take a fullscreen screenshot with flameshot.
+flameshot full

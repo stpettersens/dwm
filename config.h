@@ -1,13 +1,13 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx       = 3;   /* border pixel of windows */
+static const unsigned int borderpx       = 1;   /* border pixel of windows */
 static const unsigned int snap           = 0;  /* snap pixel */
 static const int swallowfloating         = 1;   /* 1 means swallow floating windows by default */
-static const unsigned int gappih         = 10;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 10;  /* vert inner gap between windows */
-static const unsigned int gappoh         = 10;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 30;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappih         = 5;  /* horiz inner gap between windows */
+static const unsigned int gappiv         = 5;  /* vert inner gap between windows */
+static const unsigned int gappoh         = 5;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 5;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 static const int showbar                 = 1;   /* 0 means no bar */
 static const int topbar                  = 1;   /* 0 means bottom bar */
@@ -202,8 +202,6 @@ static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
-
-
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
@@ -234,7 +232,29 @@ static const char *dmenucmd[] = {
 	NULL
 };
 
-static const char *termcmd[]  = { "st", NULL };
+static const char *browsercmd[] = {
+	"librewolf",
+	NULL
+};
+
+
+//static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[] = { "alacritty", NULL };
+
+static const char *poweroffopts[] = {
+	"dmenu_poweroff",
+	NULL
+};
+
+static const char *screenshot[] = {	
+	"screenshot",
+	NULL
+};
+
+static const char *setwallpaper[] = {
+	"set_wallpaper",
+	NULL
+};
 
 ///////////////////////////////////////////////KEYBINDS//////////////////////////////////////////////
 #include <X11/XF86keysym.h>
@@ -301,7 +321,11 @@ static Key keys[] = {
 	{ MODKEY,				XK_l,			setmfact,				{.f = +0.05} },
 	{ MODKEY|ShiftMask,     XK_q,quit,								{0} },
 	{ MODKEY|ShiftMask,     XK_e,quit,								{0} },
-	{ MODKEY,				XK_b,			togglebar,				{0} },
+	{ MODKEY,                               XK_v,                   togglebar,                              {0} },
+	{ MODKEY,                               XK_b,                   spawn,                                  {.v = browsercmd } },
+	{ MODKEY,                               XK_s,                   spawn,                                  {.v = screenshot } },
+	{ MODKEY,                               XK_x,                   spawn,                                  {.v = poweroffopts } },
+	{ MODKEY,                               XK_w,                   spawn,                                  {.v = setwallpaper } },
 	{ MODKEY,				XK_d,			spawn,					{.v = dmenucmd } },
 	{ MODKEY,				XK_f,			togglefullscreen,		{0} },
 	{ MODKEY,				XK_m,			zoom,					{0} },
