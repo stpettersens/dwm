@@ -14,16 +14,19 @@ I made the following changes to swindlemccoop's build of dwm:
 
 ![alt dwm](screenshot.png)
   
-Remember to install picom or take it out of .xinitrc and .xsession.
+Remember to install feh, librewolf, alacritty and picom or take it out of .xinitrc and .xsession.
 
 FreeBSD:
-`(doas) pkg install picom`
+`(doas) pkg install feh librewolf alacritty picom`
 
 OpenBSD:
-`(doas) pkg_add picom`
+`(doas) pkg_add feh librewolf alacritty picom`
 
 Ubuntu:
-`(sudo) apt install picom` 
+`(sudo) apt install feh alacritty picom`
+
+On Ubuntu, you can use the [AppImage version
+of LibreWolf](https://librewolf.net/installation/linux). 
 
 Set the path to your wallpapers directory in set_wallpaper.
 Remember to copy .xinitrc and .xsession to your home folder (~).
