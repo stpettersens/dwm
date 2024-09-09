@@ -5,7 +5,7 @@
  
  static const char *browsercmd[] = {
 -	"librewolf",
-+	"brave",
++	"brave-browser",
  	NULL
  };
  
