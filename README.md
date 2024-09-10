@@ -23,6 +23,9 @@ OpenBSD:
 Ubuntu:
 `(sudo) apt install feh alacritty picom`
 
+On Ubuntu, you can use the [AppImage version
+of LibreWolf](https://librewolf.net/installation/linux). 
+
 I made the following changes to swindlemccoop's build of dwm:
 
 * Modkey + b launches browser (librewolf, or if patched brave with brave.diff) rather than togglebar
@@ -33,11 +36,6 @@ I made the following changes to swindlemccoop's build of dwm:
 * Modkey + w changes desktop wallpaper using feh --fill-bg --randomize ~/Pictures/wallpaper
 
 ![alt dwm](screenshot.png)
-
-
-
-On Ubuntu, you can use the [AppImage version
-of LibreWolf](https://librewolf.net/installation/linux). 
 
 Set the path to your wallpapers directory in set_wallpaper.
   
