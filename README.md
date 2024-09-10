@@ -1,7 +1,27 @@
 #### Tweaks by stpettersens
 Set narrower borders and spacing around windows.
 
+You can use [suckless-freedom-freebsd](https://github.com/stpettersens/suckless-freedom-freebsd) patches to patch dmenu, dwm, dwmblocks and st
+to build on [FreeBSD](https://www.freebsd.org).
+
 I also use a [forked version of swindlemccoop's dwmblocks build](https://github.com/stpettersens/dwmblocks) to just display the date and time.
+Install either that or [another build](https://github.com/swindlesmccoop/dwmblocks).
+
+> You should also build/install [dmenu](https://github.com/swindlesmccoop/dmenu).
+
+> [st](https://github.com/swindlesmccoop/st) is optional as my build of dwm replaces it with alacritty.
+
+> You should also install feh, librewolf (or brave), alacritty & picom
+
+FreeBSD:
+`(doas) sh install_programs_freebsd.sh` OR
+`(doas) pkg install feh librewolf alacritty picom`
+
+OpenBSD:
+`(doas) pkg_add feh librewolf alacritty picom`
+
+Ubuntu:
+`(sudo) apt install feh alacritty picom`
 
 I made the following changes to swindlemccoop's build of dwm:
 
@@ -13,27 +33,19 @@ I made the following changes to swindlemccoop's build of dwm:
 * Modkey + w changes desktop wallpaper using feh --fill-bg --randomize ~/Pictures/wallpaper
 
 ![alt dwm](screenshot.png)
-  
-Remember to install feh, librewolf, alacritty and picom or take it out of .xinitrc and .xsession.
 
-FreeBSD:
-`(doas) pkg install feh librewolf alacritty picom`
 
-OpenBSD:
-`(doas) pkg_add feh librewolf alacritty picom`
-
-Ubuntu:
-`(sudo) apt install feh alacritty picom`
 
 On Ubuntu, you can use the [AppImage version
 of LibreWolf](https://librewolf.net/installation/linux). 
 
 Set the path to your wallpapers directory in set_wallpaper.
-Remember to copy .xinitrc and .xsession to your home folder (~).
   
 To use brave browser rather than librewolf, run the 
 following command before building with gmake/make:
 > `patch config.h < brave.diff`
+
+Running make/gmake install will also copy .xinitrc and .xsession to your home folder (~).
 
 # DWM
 DWM is my favorite window manager by far due to its simplicity, portability, and low resource usage. However, it requires a decent amount of tweaking if you want to be able to use it for standard tasks. That's what I've aimed to do here, creating a user-friendly environment and memorable keybinds.

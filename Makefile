@@ -51,6 +51,9 @@ install: all
 	cp -f dmenu_poweroff ${DESTDIR}${PREFIX}/bin
 	cp -f screenshot ${DESTDIR}${PREFIX}/bin
 	cp -f set_wallpaper $(DESTDIR)${PREFIX}/bin
+	cp -f .xinitrc ~
+	cp -f .xsession ~
+	cp -f .alacritty.toml ~
 ifdef YAJLLIBS
 	cp -f dwm-msg ${DESTDIR}${PREFIX}/bin
 endif
