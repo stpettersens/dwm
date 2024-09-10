@@ -43,6 +43,12 @@ To use brave browser rather than librewolf, run the
 following command before building with gmake/make:
 > `patch config.h < brave.diff`
 
+For the dmenu_poweroff menu (poweroff/reboot/cancel) to work, install `doas`
+and create the following file at /usr/local/etc/doas.conf (or /etc/doas.conf as applicable):
+```
+permit nopass :wheel
+```
+
 Running make/gmake install will also copy .xinitrc and .xsession to your home folder (~).
 
 # DWM
