@@ -4,4 +4,5 @@
 pkg install -y feh
 pkg install -y librewolf
 pkg install -y alacritty
+pkg install -y flameshot
 pkg install -y picom

@@ -11,11 +11,11 @@ Install either that or [another build](https://github.com/swindlesmccoop/dwmbloc
 
 > [st](https://github.com/swindlesmccoop/st) is optional as my build of dwm replaces it with alacritty.
 
-> You should also install feh, librewolf (or brave), alacritty & picom
+> You should also install feh, librewolf (or brave), alacritty, flameshot & picom
 
 FreeBSD:
 `(doas) sh install_programs_freebsd.sh` OR
-`(doas) pkg install feh librewolf alacritty picom`
+`(doas) pkg install feh librewolf alacritty flameshot picom`
 
 OpenBSD:
 `(doas) pkg_add feh librewolf alacritty picom`
