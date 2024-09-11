@@ -49,7 +49,8 @@ and create the following file at /usr/local/etc/doas.conf (or /etc/doas.conf as 
 permit nopass :wheel
 ```
 
-Running make/gmake install will also copy .xinitrc and .xsession to your home folder (~).
+Run `make/gmake dotfiles` to copy .xinitrc, .xsession and .alacritty.toml to your home folder (~)
+which is needed to run this build of dwm properly.
 
 # DWM
 DWM is my favorite window manager by far due to its simplicity, portability, and low resource usage. However, it requires a decent amount of tweaking if you want to be able to use it for standard tasks. That's what I've aimed to do here, creating a user-friendly environment and memorable keybinds.

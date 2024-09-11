@@ -44,6 +44,11 @@ dist: clean
 	tar -cf dwm-${VERSION}.tar dwm-${VERSION}
 	gzip dwm-${VERSION}.tar
 	rm -rf dwm-${VERSION}
+	
+dotfiles:
+	cp -f .xinitrc ~
+	cp -f .xsession ~
+	cp -f .alacritty.toml ~
 
 install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
@@ -51,9 +56,6 @@ install: all
 	cp -f dmenu_poweroff ${DESTDIR}${PREFIX}/bin
 	cp -f screenshot ${DESTDIR}${PREFIX}/bin
 	cp -f set_wallpaper $(DESTDIR)${PREFIX}/bin
-	cp -f .xinitrc ~
-	cp -f .xsession ~
-	cp -f .alacritty.toml ~
 ifdef YAJLLIBS
 	cp -f dwm-msg ${DESTDIR}${PREFIX}/bin
 endif
