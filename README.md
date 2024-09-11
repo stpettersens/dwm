@@ -20,6 +20,9 @@ FreeBSD:
 OpenBSD:
 `(doas) pkg_add feh librewolf alacritty flameshot picom`
 
+Void Linux
+`(sudo) xpbs-install -S feh alacritty flameshot picom`
+
 Ubuntu:
 `(sudo) apt install feh alacritty flameshot picom`
 
