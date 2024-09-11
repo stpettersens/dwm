@@ -18,10 +18,10 @@ FreeBSD:
 `(doas) pkg install feh librewolf alacritty flameshot picom`
 
 OpenBSD:
-`(doas) pkg_add feh librewolf alacritty picom`
+`(doas) pkg_add feh librewolf alacritty flameshot picom`
 
 Ubuntu:
-`(sudo) apt install feh alacritty picom`
+`(sudo) apt install feh alacritty flameshot picom`
 
 On Ubuntu, you can use the [AppImage version
 of LibreWolf](https://librewolf.net/installation/linux). 
