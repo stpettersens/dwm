@@ -237,8 +237,31 @@ static const char *browsercmd[] = {
 	NULL
 };
 
+const const char *upvolume[] = {
+	"up_volume",
+	NULL
+};
 
-//static const char *termcmd[]  = { "st", NULL };
+static const char *downvolume[] = {
+	"down_volume",
+	NULL
+};
+
+static const char *mutevolume[] = {
+	"mute_volume",
+	NULL
+};
+
+static const char *bluetoothon[] = {
+	"bluetooth_on",
+	NULL
+};
+
+static const char *bluetoothoff[] = {
+	"bluetooth_off",
+	NULL
+};
+
 static const char *termcmd[] = { "alacritty", NULL };
 
 static const char *poweroffopts[] = {
@@ -327,6 +350,11 @@ static Key keys[] = {
 	{ MODKEY,                               XK_x,                   spawn,                                  {.v = poweroffopts } },
 	{ MODKEY,                               XK_w,                   spawn,                                  {.v = setwallpaper } },
 	{ MODKEY,				XK_d,			spawn,					{.v = dmenucmd } },
+	{ MODKEY,                               XK_e,                   spawn,                                  {.v = downvolume } },
+	{ MODKEY,                               XK_r,                   spawn,                                  {.v = upvolume } },
+	{ MODKEY,                               XK_z,                   spawn,                                  {.v = mutevolume } },
+	{ MODKEY,                               XK_u,                   spawn,                                  {.v = bluetoothoff } },
+	{ MODKEY,                               XK_i,                   spawn,                                  {.v = bluetoothon } },
 	{ MODKEY,				XK_f,			togglefullscreen,		{0} },
 	{ MODKEY,				XK_m,			zoom,					{0} },
 	{ MODKEY,				XK_o,			incnmaster,				{.i = +1 } },

@@ -54,8 +54,11 @@ install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	cp -f dwm ${DESTDIR}${PREFIX}/bin
 	cp -f dmenu_poweroff ${DESTDIR}${PREFIX}/bin
+	cp -f up_volume ${DESTDIR}${PREFIX}/bin
+	cp -f down_volume ${DESTDIR}${PREFIX}/bin
+	cp -f mute_volume ${DESTDIR}${PREFIX}/bin
 	cp -f screenshot ${DESTDIR}${PREFIX}/bin
-	cp -f set_wallpaper $(DESTDIR)${PREFIX}/bin
+	cp -f set_wallpaper ${DESTDIR}${PREFIX}/bin
 ifdef YAJLLIBS
 	cp -f dwm-msg ${DESTDIR}${PREFIX}/bin
 endif
