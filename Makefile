@@ -9,9 +9,9 @@ OBJ = ${SRC:.c=.o}
 # FreeBSD users, prefix all ifdef, else and endif statements with a . for this to work (e.g. .ifdef)
 
 ifdef YAJLLIBS
-all: options dwm dwm-msg
+all: options dwm dwm-msg dotfiles
 else
-all: options dwm
+all: options dwm dotfiles
 endif
 
 options:
@@ -44,7 +44,7 @@ dist: clean
 	tar -cf dwm-${VERSION}.tar dwm-${VERSION}
 	gzip dwm-${VERSION}.tar
 	rm -rf dwm-${VERSION}
-	
+
 dotfiles:
 	cp -f .xinitrc ~
 	cp -f .xsession ~
