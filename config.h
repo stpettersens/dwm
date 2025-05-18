@@ -233,11 +233,11 @@ static const char *dmenucmd[] = {
 };
 
 static const char *browsercmd[] = {
-	"librewolf",
+	"firefox",
 	NULL
 };
 
-const const char *upvolume[] = {
+static const char *upvolume[] = {
 	"up_volume",
 	NULL
 };
@@ -252,6 +252,11 @@ static const char *mutevolume[] = {
 	NULL
 };
 
+static const char *setaudioout[] = {
+    "set_audio_output_device",
+    NULL
+};
+
 static const char *bluetoothon[] = {
 	"bluetooth_on",
 	NULL
@@ -262,14 +267,29 @@ static const char *bluetoothoff[] = {
 	NULL
 };
 
-static const char *termcmd[] = { "alacritty", NULL };
+static const char *picomon[] = {
+	"picom_on",
+	NULL
+};
+
+static const char *picomoff[] = {
+	"picom_off",
+	NULL
+};
+
+static const char *ulauncher[] = {
+    "ulauncher-toggle",
+    NULL
+};
+
+static const char *termcmd[] = { "alacritty", NULL }; //{ "st", NULL };
 
 static const char *poweroffopts[] = {
 	"dmenu_poweroff",
 	NULL
 };
 
-static const char *screenshot[] = {	
+static const char *screenshot[] = {
 	"screenshot",
 	NULL
 };
@@ -308,8 +328,8 @@ static const char *setwallpaper[] = {
 static Key keys[] = {
 	/*modifierkey			function		argument */
 	{ MODKEY,				XK_p,			spawn,					{.v = dmenucmd } },
-	{ MODKEY,				XK_j,			focusstack,				{.i = +1 } },
-	{ MODKEY,				XK_k,			focusstack,				{.i = -1 } },
+	//{ MODKEY,				XK_j,			focusstack,				{.i = +1 } },
+	//{ MODKEY,				XK_k,			focusstack,				{.i = -1 } },
 	{ MODKEY,				XK_Down,		moveresize,				{.v = "0x 25y 0w 0h" } },
 	{ MODKEY,				XK_Up,			moveresize,				{.v = "0x -25y 0w 0h" } },
 	{ MODKEY,				XK_Right,		moveresize,				{.v = "25x 0y 0w 0h" } },
@@ -326,10 +346,10 @@ static Key keys[] = {
 	{ MODKEY,				XK_grave,		togglescratch,			{.ui = 0 } },
 	{ MODKEY|ControlMask,	XK_grave,		setscratch,				{.ui = 0 } },
 	{ MODKEY|ShiftMask,		XK_grave,		removescratch,			{.ui = 0 } },
-	{ MODKEY,				XK_y,			togglefullscreen,		{0} },
+{ MODKEY,				XK_y,			togglefullscreen,		{0} },
 	{ MODKEY,				XK_0,			view,					{.ui = ~SPTAGMASK } },
 	{ MODKEY|ShiftMask,		XK_0,			tag,					{.ui = ~SPTAGMASK } },
-	
+
 	  TAGKEYS(				XK_1,									0)
 	  TAGKEYS(				XK_2,									1)
 	  TAGKEYS(				XK_3,									2)
@@ -341,7 +361,7 @@ static Key keys[] = {
 	  TAGKEYS(				XK_9,									8)
 
 	{ MODKEY,				XK_h,			setmfact,				{.f = -0.05} },
-	{ MODKEY,				XK_l,			setmfact,				{.f = +0.05} },
+	//{ MODKEY,				XK_l,			setmfact,				{.f = +0.05} },
 	//{ MODKEY|ShiftMask,     XK_q,quit,								{0} },
 	//{ MODKEY|ShiftMask,     XK_e,quit,								{0} },
 	{ MODKEY,                               XK_v,                   togglebar,                              {0} },
@@ -349,12 +369,16 @@ static Key keys[] = {
 	{ MODKEY,                               XK_s,                   spawn,                                  {.v = screenshot } },
 	{ MODKEY,                               XK_x,                   spawn,                                  {.v = poweroffopts } },
 	{ MODKEY,                               XK_w,                   spawn,                                  {.v = setwallpaper } },
-	{ MODKEY,				XK_d,			spawn,					{.v = dmenucmd } },
+	//{ MODKEY,				XK_d,			spawn,					{.v = dmenucmd } },
 	{ MODKEY,                               XK_e,                   spawn,                                  {.v = downvolume } },
 	{ MODKEY,                               XK_r,                   spawn,                                  {.v = upvolume } },
 	{ MODKEY,                               XK_z,                   spawn,                                  {.v = mutevolume } },
+    { MODKEY,                               XK_a,                   spawn,                                  {.v = setaudioout } },
 	{ MODKEY,                               XK_u,                   spawn,                                  {.v = bluetoothoff } },
 	{ MODKEY,                               XK_i,                   spawn,                                  {.v = bluetoothon } },
+	{ MODKEY,                               XK_j,                   spawn,                                  {.v = picomoff } },
+	{ MODKEY,                               XK_k,                   spawn,                                  {.v = picomon } },
+	{ MODKEY,                               XK_l,                   spawn,                                  {.v = ulauncher } },
 	{ MODKEY,				XK_f,			togglefullscreen,		{0} },
 	{ MODKEY,				XK_m,			zoom,					{0} },
 	{ MODKEY,				XK_o,			incnmaster,				{.i = +1 } },

@@ -1,2 +1,3 @@
 #!/bin/sh
-amixer -q sset Master toggle
+ponymix toggle
+#amixer -q sset Master toggle
