@@ -9,9 +9,9 @@ OBJ = ${SRC:.c=.o}
 # FreeBSD users, prefix all ifdef, else and endif statements with a . for this to work (e.g. .ifdef)
 
 ifdef YAJLLIBS
-all: options dwm dwm-msg dotfiles
+all: options dwm dwm-msg dotfiles dmenupoweroff
 else
-all: options dwm dotfiles
+all: options dwm dotfiles dmenupoweroff
 endif
 
 options:
@@ -36,6 +36,7 @@ endif
 clean:
 	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
 	rm -f dwm-msg
+	rm -f dmenu_poweroff
 
 dist: clean
 	mkdir -p dwm-${VERSION}
@@ -49,6 +50,11 @@ dotfiles:
 	cp -f .xinitrc ~
 	cp -f .xsession ~
 	cp -f .alacritty.toml ~
+
+dmenupoweroff:
+	ldc2 dmenu_poweroff.d
+	rm -f dmenu_poweroff.o
+	upx -9 dmenu_poweroff
 
 install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
