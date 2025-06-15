@@ -2,6 +2,6 @@
 # startx
 # start picom, dwmblocks, set wallpaper and run dwm:
 
-set_wallpaper & dwmblocks & picom & ulauncher & ulauncher-toggle
+set_wallpaper & dwmblocks & picom & start-ulauncher &
 
-exec dwm # or startxfce4 for xfce
+exec dwm

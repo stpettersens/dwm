@@ -18,8 +18,8 @@ static const int statusmon               = 'A';
 static int tagindicatortype              = INDICATOR_NONE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_NONE;
-static const char *fonts[]               = { "monospace:size=8" };
-static const char dmenufont[]            = "monospace:size=8";
+static const char *fonts[]               = { "monospace:size=9" };
+static const char dmenufont[]            = "monospace:size=9";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -233,7 +233,7 @@ static const char *dmenucmd[] = {
 };
 
 static const char *browsercmd[] = {
-	"firefox",
+	"brave",
 	NULL
 };
 
